@@ -10,9 +10,9 @@ int main()
         scanf("%d", &n);
     }
     int iloczyn=1;
-    for(int i=2;i<=n;i=i+2)
+    for(int i=2 ; i<=n ; i=i+2)
     {
         iloczyn*=i;
     }
-    printf("%d",iloczyn);
+    printf("%d", iloczyn);
 }

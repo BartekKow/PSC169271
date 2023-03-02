@@ -13,31 +13,31 @@ int main()
     scanf("%d", &operacja);
     while(operacja>0 && operacja<6)
     {
-        if(operacja==1)
+        if(operacja == 1)
         {
             wynik=x+y;
             printf("%lf", wynik);
             break;
         }
-        else if(operacja==2)
+        else if(operacja == 2)
         {
             wynik=x-y;
             printf("%lf", wynik);
             break;
         }
-        else if(operacja==3)
+        else if(operacja == 3)
         {
             wynik=x*y;
             printf("%lf", wynik);
             break;
         }
-        else if(operacja==4)
+        else if(operacja == 4)
         {
             wynik=x/y;
             printf("%lf", wynik);
             break;
         }
-        else if(operacja==5)
+        else if(operacja == 5)
         {
             wynik=x;
             for(int i=0;i<y;i++)

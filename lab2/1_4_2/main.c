@@ -11,6 +11,6 @@ int main()
     for(int i=1 ; i<=m ; i++)
     {
         wielo=n*i;
-        printf("%d ", wielo);
+        printf("%d ",wielo);
     }
 }

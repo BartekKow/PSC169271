@@ -6,7 +6,7 @@ int main()
     int x;
     scanf("%d", &x);
     int silnia=x;
-    if(x==0)
+    if(x == 0)
     {
         silnia=1;
         printf("%d", silnia);

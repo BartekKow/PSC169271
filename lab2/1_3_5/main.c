@@ -22,7 +22,7 @@ int main()
         scanf("%lf %lf %lf",&x,&y,&z);
         double p=(x+y+z)/2.0;
         suma=sqrt(p*(p-x)*(p-y)*(p-z));
-        printf("%lf", suma);
+        printf("%lf",suma);
     }
     else
     {

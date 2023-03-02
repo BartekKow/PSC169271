@@ -9,7 +9,7 @@ int main()
     if(a>0)
     {
         double delta=((b*b)-4*a*c);
-        printf("Delta: %lf \n", delta);
+        printf("Delta: %lf \n",delta);
         if(delta>0)
             {
                 double x1=(-b+sqrt(delta))/2*a;
