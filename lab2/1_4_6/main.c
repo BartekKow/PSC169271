@@ -15,4 +15,5 @@ int main()
         iloczyn*=i;
     }
     printf("%d", iloczyn);
+    return 0;
 }

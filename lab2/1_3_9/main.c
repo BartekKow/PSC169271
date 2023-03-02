@@ -53,4 +53,5 @@ int main()
             scanf("%d", &operacja);
         }
     }
+    return 0;
 }

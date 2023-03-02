@@ -13,4 +13,5 @@ int main()
         wielo=n*i;
         printf("%d ",wielo);
     }
+    return 0;
 }

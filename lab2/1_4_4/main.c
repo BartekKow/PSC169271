@@ -19,4 +19,5 @@ int main()
         }
         printf("Silnia: %d",silnia);
     }
+    return 0;
 }

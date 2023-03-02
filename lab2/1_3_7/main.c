@@ -31,4 +31,5 @@ int main()
     {
         printf("Rownanie nie jest kwadratowe");
     }
+    return 0;
 }
