@@ -65,6 +65,10 @@ int main()
             printf("b) %d\n", x);
         }
     }
+    else
+        {
+            printf("b) %d \n",x);
+        }
 
     //c)
     x=0;
@@ -104,4 +108,8 @@ int main()
             printf("c) %d\n", x);
         }
     }
+    else
+        {
+            printf("c) %d \n",x);
+        }
 }
