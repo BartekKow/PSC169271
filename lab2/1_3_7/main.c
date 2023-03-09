@@ -12,8 +12,8 @@ int main()
         printf("Delta: %lf \n",delta);
         if(delta>0)
             {
-                double x1=(-b+sqrt(delta))/2*a;
-                double x2=(-b-sqrt(delta))/2*a;
+                double x1=(-b+sqrt(delta))/(2*a);
+                double x2=(-b-sqrt(delta))/(2*a);
                 printf("x1: %lf \n", x1);
                 printf("x2: %lf ", x2);
             }
