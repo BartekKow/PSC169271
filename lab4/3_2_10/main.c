@@ -9,5 +9,6 @@ double *rezerwuj()
 int main()
 {
     double *x = rezerwuj();
+    free(x);
     return 0;
 }

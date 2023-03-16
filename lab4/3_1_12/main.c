@@ -8,7 +8,8 @@ double *funkcja(int n)
 
 int main()
 {
-    int n=9;
-    printf("%p",funkcja(n));
+    double *wsk=funkcja(9);
+    printf("%p",wsk);
+    free(wsk);
     return 0;
 }

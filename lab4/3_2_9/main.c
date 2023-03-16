@@ -9,5 +9,6 @@ int *rezerwuj()
 int main()
 {
     int *x = rezerwuj();
+    free(x);
     return 0;
 }
