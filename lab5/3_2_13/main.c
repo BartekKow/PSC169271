@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-double funkcja(double (*zwroc)(int n), int x)
+double funkcja(double (*zwroc)(int), int x)
 {
     return zwroc(x);
 }
 
 double zwroc(int n)
 {
-    return n*n;
+    return (double)(n*n);
 }
 
 int main()

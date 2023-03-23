@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1679581308 source:c:\users\bartek\onedrive\dokumenty\github\psc169271\lab5\3_2_14\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
