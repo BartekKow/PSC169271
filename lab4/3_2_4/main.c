@@ -8,11 +8,6 @@ void zamiana(int *x, int *y)
         int z=*x;
         *x=*y;
         *y=z;
-        printf("x = %d\ny = %d",*x,*y);
-    }
-    else
-    {
-        printf("x = %d\ny = %d",*x,*y);
     }
 }
 

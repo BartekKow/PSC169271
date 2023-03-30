@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int suma(int *x, int *y)
+int suma(const int *x,const int *y)
 {
     int sum=*x+*y;
     return sum;
