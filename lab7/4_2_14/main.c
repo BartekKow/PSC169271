@@ -3,8 +3,7 @@
 
 double* foo(int n)
 {
-    double *tab=(double*)malloc(n*sizeof(double));
-    return tab;
+    return (double*)malloc(n*sizeof(double));
 }
 
 int main()
