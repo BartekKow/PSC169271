@@ -4,9 +4,13 @@
 double* foo(int n, double tab[])
 {
     double *tab2=(double*)malloc(n*sizeof(double));
+    if (tab2==NULL)
+    {
+        return NULL;
+    }
     for(int i=0;i<n;i++)
     {
-        *(tab2+i)=tab[i];
+        *(tab2+i)=*(tab+i);
     }
     return tab2;
 }
