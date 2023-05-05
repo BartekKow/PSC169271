@@ -1,29 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int foo(int n, int m, int tab[][m])
-{
+int foo(int tablica[][20], int n) {
     int suma = 0;
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            suma += tab[i][j];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 20; j++) {
+            suma += tablica[i][j];
         }
     }
     return suma;
 }
 
 int main() {
-    int tablica[2][4];
-    for (int i = 0; i < 2; i++)
+    int tablica[3][20];
+    for (int i = 0; i < 3; i++)
     {
-        for (int j = 0; j < 4; j++)
+        for (int j = 0; j < 20; j++)
         {
-            tablica[i][j] = i * 4 + j;
+            tablica[i][j] = i + j;
         }
     }
-    int suma = foo(2, 4, tablica);
+    int suma = foo(tablica, 3);
     printf("%d", suma);
     return 0;
 }
