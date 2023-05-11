@@ -42,6 +42,5 @@ int main()
     pokazKsiazka(*k1);
     dodajStrony(k1);
     pokazKsiazka(*k1);
-    free(k1);
     return 0;
 }
