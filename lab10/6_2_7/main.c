@@ -4,7 +4,7 @@
 int **foo(int n)
 {
     int** tab = malloc(n* sizeof(int*));
-    for (int i = 0; i < 0; i++)
+    for (int i = 0; i < n; i++)
     {
         tab[i] = malloc((i+1) * sizeof(int));
     }
