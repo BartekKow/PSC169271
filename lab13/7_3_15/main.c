@@ -7,18 +7,19 @@ struct element
     struct element *next;
 };
 
-struct element *znajdz(struct element* Lista, int a)
+struct element* znajdz(struct element *lista, int a)
 {
-    while((Lista != NULL) && Lista->i!=a)
+    struct element* wsk = lista->next;
+    while((lista != NULL) && lista->i != a)
     {
-        Lista = Lista->next;
+        lista = lista->next;
     }
-    return Lista;
+    return lista;
 }
 
 void wyczysc(struct element * lista)
 {
-    struct element * wsk = lista;
+    struct element * wsk = lista->next;
     struct element * wsk2 = wsk;
     while(wsk!= NULL)
     {
@@ -26,19 +27,19 @@ void wyczysc(struct element * lista)
         free(wsk2);
         wsk2=wsk;
     }
-    return NULL;
+    lista->next = NULL;
 }
 
 int main()
 {
     struct element *lista = malloc(sizeof(struct element));
-    lista->i = 1;
     lista->next = malloc(sizeof(struct element));
-    lista->next->i = 2;
+    lista->next->i = 1;
     lista->next->next = malloc(sizeof(struct element));
-    lista->next->next->i = 3;
-    lista->next->next->next = NULL;
-    struct element *x = znajdz(lista, 2);
+    lista->next->next->i = 2;
+    lista->next->next->next = malloc(sizeof(struct element));;
+    lista->next->next->next->i = 3;
+    struct element *x = znajdz(lista, 3);
     printf("%d", x->i);
     wyczysc(lista);
 }

@@ -6,25 +6,33 @@ struct element {
     struct element* next;
 };
 
-void wyczysc(struct element* Lista)
+void wyczysc(struct element * lista)
 {
-    struct element* wsk = Lista;
-    while (Lista != NULL)
+    struct element * wsk = lista;
+    struct element * wsk2 = wsk;
+    while(wsk!= NULL)
     {
-        Lista = Lista->next;
-        free(wsk);
-        wsk = Lista;
+        wsk=wsk->next;
+        free(wsk2);
+        wsk2=wsk;
     }
+    return NULL;
 }
 
 void wyswietl(struct element * lista)
 {
+    if (lista == NULL)
+    {
+        printf("Lista jest pusta\n---\n");
+        return;
+    }
     struct element * wsk = lista;
     while(wsk != NULL)
     {
         printf("%d\n", wsk->i);
         wsk = wsk->next;
     }
+    printf("---\n");
 }
 
 int main()
@@ -36,5 +44,6 @@ int main()
     lista->next->next = NULL;
     wyswietl(lista);
     wyczysc(lista);
+    wyswietl(lista);
     return 0;
 }

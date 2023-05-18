@@ -7,26 +7,33 @@ struct element
     struct element *next;
 };
 
-void wyczysc(struct element *lista)
+void wyczysc(struct element * lista)
 {
-    struct element *wsk = lista->next;
-    lista = wsk;
-    while(lista!=NULL)
+    struct element * wsk = lista->next;
+    struct element * wsk2 = wsk;
+    while(wsk!= NULL)
     {
-        lista = lista->next;
-        free(wsk);
-        wsk = lista;
+        wsk=wsk->next;
+        free(wsk2);
+        wsk2=wsk;
     }
+    lista->next = NULL;
 }
 
 void wyswietl(struct element * lista)
 {
+    if (lista->next == NULL)
+    {
+        printf("Lista jest pusta\n---\n");
+        return;
+    }
     struct element * wsk = lista->next;
     while(wsk != NULL)
     {
         printf("%d\n", wsk->i);
         wsk = wsk->next;
     }
+    printf("---\n");
 }
 
 int main()
@@ -41,4 +48,5 @@ int main()
     lista->next->next->next->next = NULL;
     wyswietl(lista);
     wyczysc(lista);
+    wyswietl(lista);
 }
