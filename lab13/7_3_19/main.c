@@ -30,7 +30,24 @@ void wyswietl(struct element * lista)
     printf("---\n");
 }
 
-int main()
-{
+int main() {
+    struct element* lista = malloc(sizeof(struct element));
+    lista->next = malloc(sizeof(struct element));
+    lista->next->i = 1;
+    lista->next->next = malloc(sizeof(struct element));
+    lista->next->next->i = 2;
+    lista->next->next->next = malloc(sizeof(struct element));
+    lista->next->next->next->i = 3;
+    lista->next->next->next->next = NULL;
+
+    usun2(lista, lista->next);
+
+    wyswietl(lista);
+
+    while (lista != NULL) {
+        struct element* temp = lista;
+        lista = lista->next;
+        free(temp);
+    }
     return 0;
 }
