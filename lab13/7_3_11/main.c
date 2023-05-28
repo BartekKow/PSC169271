@@ -7,7 +7,7 @@ struct element
     struct element *next;
 };
 
-void wyczysc(struct element * lista)
+struct element * wyczysc(struct element * lista)
 {
     struct element * wsk = lista->next;
     struct element * wsk2 = wsk;
@@ -47,6 +47,6 @@ int main()
     lista->next->next->next->i = -4;
     lista->next->next->next->next = NULL;
     wyswietl(lista);
-    wyczysc(lista);
+    lista = wyczysc(lista);
     wyswietl(lista);
 }

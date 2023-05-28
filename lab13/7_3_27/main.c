@@ -28,6 +28,10 @@ struct element *minimum(struct element *lista)
 
 struct element *minimum2(struct element *lista)
 {
+    if (lista == NULL || lista->next == NULL)
+    {
+        return lista;
+    }
     struct element *min = lista;
     while(lista->next != NULL)
     {
@@ -36,22 +40,6 @@ struct element *minimum2(struct element *lista)
         lista = lista->next;
     }
     return min;
-}
-
-void wyswietl(struct element * lista)
-{
-    if (lista == NULL)
-    {
-        printf("Lista jest pusta\n---\n");
-        return;
-    }
-    struct element * wsk = lista;
-    while(wsk != NULL)
-    {
-        printf("%d\n", wsk->i);
-        wsk = wsk->next;
-    }
-    printf("---\n");
 }
 
 int main()

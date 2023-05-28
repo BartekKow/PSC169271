@@ -9,7 +9,6 @@ struct element
 
 struct element* znajdz(struct element *lista, int a)
 {
-    struct element* wsk = lista->next;
     while((lista != NULL) && lista->i != a)
     {
         lista = lista->next;
@@ -17,7 +16,7 @@ struct element* znajdz(struct element *lista, int a)
     return lista;
 }
 
-void wyczysc(struct element * lista)
+struct element * wyczysc(struct element * lista)
 {
     struct element * wsk = lista->next;
     struct element * wsk2 = wsk;
@@ -39,7 +38,8 @@ int main()
     lista->next->next->i = 2;
     lista->next->next->next = malloc(sizeof(struct element));;
     lista->next->next->next->i = 3;
+    lista->next->next->next->next = NULL;
     struct element *x = znajdz(lista, 3);
     printf("%d", x->i);
-    wyczysc(lista);
+    lista = wyczysc(lista);
 }

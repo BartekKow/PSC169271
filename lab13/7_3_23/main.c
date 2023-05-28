@@ -16,7 +16,7 @@ int spr(struct trojka* x)
     return 0;
 }
 
-void pitagoras(struct trojka* lista)
+struct element * pitagoras(struct trojka* lista)
 {
     struct trojka *wsk, *wsk2;
     while(lista != NULL && spr(lista) == 0)
@@ -107,8 +107,8 @@ int main()
     x->next->b = 4;
     x->next->c = 5;
     x->next->next = NULL;
-    pitagoras(x);
-    wyswietlbez(x);
+    struct element * z = pitagoras(x);
+    wyswietlbez(z);
 
     struct trojka *y = malloc(sizeof(struct trojka));
     y->next = malloc(sizeof(struct trojka));

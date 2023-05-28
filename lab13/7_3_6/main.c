@@ -16,7 +16,7 @@ struct element *znajdz(struct element* Lista, int a)
     return Lista;
 }
 
-void wyczysc(struct element * lista)
+struct element * wyczysc(struct element * lista)
 {
     struct element * wsk = lista;
     struct element * wsk2 = wsk;
@@ -40,5 +40,5 @@ int main()
     lista->next->next->next = NULL;
     struct element *x = znajdz(lista, 2);
     printf("%d", x->i);
-    wyczysc(lista);
+    lista = wyczysc(lista);
 }
